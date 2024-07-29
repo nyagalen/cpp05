@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:00:57 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/29 22:05:49 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 01:04:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ class RobotomyRequestForm : public AForm
         RobotomyRequestForm(const RobotomyRequestForm& copyMe);
         RobotomyRequestForm& operator=(const RobotomyRequestForm& rhs);
         ~RobotomyRequestForm();
-        void execute(const Bureaucrat& executor);
+        void execute(const Bureaucrat& executor) const;
 };

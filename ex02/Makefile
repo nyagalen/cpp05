@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/27 18:56:10 by svydrina          #+#    #+#              #
-#    Updated: 2024/07/27 19:20:44 by marvin           ###   ########.fr        #
+#    Updated: 2024/07/30 01:52:33 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME): $(OBJS) $(HEADERS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) ShrubberyCreationForm_shrubbery
 
 fclean: clean
 	rm -rf $(NAME)

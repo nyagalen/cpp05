@@ -6,12 +6,15 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:28 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/27 19:23:17 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 00:50:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -28,6 +31,7 @@ class Bureaucrat
         int getGrade() const;
         void increment();
         void decrement();
+        void executeForm(const AForm& form);
 
     class GradeTooHighException : public std::exception
     {

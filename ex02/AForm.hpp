@@ -6,13 +6,15 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/29 21:41:22 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 00:51:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class AForm
 {
@@ -25,8 +27,8 @@ class AForm
 		AForm();
 		AForm(const std::string name, int gradeSign);
         AForm(const std::string name, int gradeSign, int gradeExec);
-		AForm(const Form& copyMe);
-		AForm &operator=(const Form &original);
+		AForm(const AForm& copyMe);
+		AForm &operator=(const AForm &original);
 		virtual ~AForm();
 		std::string getName() const;
 		bool isSigned() const;
@@ -54,5 +56,5 @@ class AForm
     };
 		
 };
-std::ostream& operator<<(std::ostream& o, const Form& rhs);
+std::ostream& operator<<(std::ostream& o, const AForm& rhs);
 

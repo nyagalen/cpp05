@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:02:14 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/29 22:03:36 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 01:02:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& cop
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs)
 {
-    void(rhs);
+    if ( this == &rhs)
+     return *this;
     return *this;
 }
 
