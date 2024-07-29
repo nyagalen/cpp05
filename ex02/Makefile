@@ -3,11 +3,39 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: svydrina <svydrina@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/27 18:56:10 by svydrina          #+#    #+#              #
-#    Updated: 2024/07/27 18:56:13 by svydrina         ###   ########.fr        #
+#    Updated: 2024/07/27 19:20:44 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = AForm
 
+SRCS = AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
+	ShrubberyCreationForm.cpp main.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+HEADERS = AForm.hpp Bureaucrat.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp \
+ShrubberyCreationForm.hpp
+
+CC = c++
+
+FLAGS = -Wall -Werror -Wextra -std=c++98
+
+all: $(NAME)
+
+$(NAME): $(OBJS) $(HEADERS)
+	$(CC) $(OBJS) -o $(NAME)
+
+%.o: %.cpp $(HEADERS)
+	$(CC) $(FLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(OBJS)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re: fclean all
