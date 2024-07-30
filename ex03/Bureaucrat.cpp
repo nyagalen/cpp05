@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:41 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 01:50:08 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 15:35:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), grade(grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << "name/grade constructor called" << std::endl;
+   // std::cout << "name/grade constructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copyMe): _name(copyMe._name), grade(copyMe.grade)
@@ -72,7 +72,7 @@ void Bureaucrat::executeForm(const AForm& form)
         throw AForm::NotSignedException();
     if (form.getGradeExec() < grade)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << _name << " executed " << form.getName() << std::endl;
+    std::cout << _name << " is executing " << form.getName() << std::endl;
     form.execute(*this);
 }
 
