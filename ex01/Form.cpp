@@ -6,16 +6,16 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:36:57 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/27 18:30:54 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 15:45:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): gradeSign(0), gradeExec(0)
+Form::Form(): _signed(false), gradeSign(0), gradeExec(0)
 {}
 
-Form::Form(const std::string name, int gradeSign) : _name(name), gradeSign(gradeSign), gradeExec(0)
+Form::Form(const std::string name, int gradeSign) : _name(name), _signed(false), gradeSign(gradeSign), gradeExec(0)
 {
     if (gradeSign < 1)
         throw Form::GradeTooHighException();
