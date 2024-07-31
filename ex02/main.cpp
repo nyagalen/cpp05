@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 20:06:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 23:51:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,16 @@ int main(void)
     {
         std::cerr << e.what() << '\n';
     }
+    try
+    {
+        std::cout << "\n------let's see if the loch can robotomize too----" << std::endl;
+        loch.executeForm(robotomy);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
     
     try 
     {
@@ -54,9 +64,9 @@ int main(void)
     }
     try 
     {
-        std::cout << "\n--------------let's see if loch is also good at pardoning!----------"<< std::endl;
+        std::cout << "\n--------------let's see if mid guy is also good at pardoning!----------"<< std::endl;
         //pardon.beSigned(president);
-        loch.executeForm(pardon);
+        mid.executeForm(pardon);
     }
     catch (std::exception &e)
     {
