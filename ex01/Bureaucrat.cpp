@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:36:05 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 19:16:34 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:26:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void Bureaucrat::signForm(Form& form)
         std::cout <<CYAN<< _name <<RESET<< " signed " << form.getName() << std::endl;
     } catch (std::exception &e)
     {
-        std::cerr <<CYAN<< _name <<RESET<<   " couldn't sign " << form.getName() <<
+        std::cerr <<CYAN<< _name <<RESET<< " couldn't sign " << form.getName() <<
        RED " because grade is too low" RESET<< std::endl;
     }
 }
