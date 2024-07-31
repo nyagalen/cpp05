@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:43:28 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 17:52:23 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:49:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,22 +55,24 @@ int	Bureaucrat::getGrade() const
 
 void	Bureaucrat::increment()
 {
+	std::cout << "Let's promote bureaucrat " << CYAN << _name << RESET <<"?" << std::endl;
 	if (this->grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
 	this->grade--;
-	std::cout << "Bureaucrat " << this->_name << " has been promoted!" << std::endl;
+	std::cout << "Bureaucrat " << CYAN << this->_name << RESET << " has been promoted!" << std::endl;
 }
 
 void	Bureaucrat::decrement()
 {
+	std::cout << "Let's degrade bureaucrat " << CYAN << _name << RESET <<"?" << std::endl;
 	if (this->grade >= 150)
 		throw Bureaucrat::GradeTooLowException();
 	this->grade++;
-	std::cout << "Bureaucrat "<< this->_name << " has been degraded!" << std::endl;
+	std::cout << "Bureaucrat "<< CYAN << this->_name << RESET << " has been degraded!" << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& rhs)
 {
-	o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << ".\n";
+	o << YELLOW << rhs.getName() <<RESET ", bureaucrat grade " << rhs.getGrade() << ".\n";
 	return o;
 }
