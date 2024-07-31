@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:36:45 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 17:58:03 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:00:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 #pragma once
 #include <iostream>
 #include "Bureaucrat.hpp"
+
+#define RED "\033[31m"
+#define CYAN "\033[36m"
+#define RESET "\033[0m"
 
 class Bureaucrat;
 

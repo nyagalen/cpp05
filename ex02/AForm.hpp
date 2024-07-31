@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:32:28 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:40:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class AForm
 		bool _signed;
 		const int gradeSign;
 		const int gradeExec;
-	public:
 		AForm();
+	public:
 		AForm(const std::string name, int gradeSign);
         AForm(const std::string name, int gradeSign, int gradeExec);
 		AForm(const AForm& copyMe);

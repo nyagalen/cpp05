@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:36:05 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 16:06:22 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:16:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), grade(grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << "name/grade constructor called" << std::endl;
+    std::cout <<"Bureaucrat " << YELLOW << _name << RESET << " created"<< std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copyMe): _name(copyMe._name), grade(copyMe.grade)
@@ -70,16 +70,16 @@ void Bureaucrat::signForm(Form& form)
     try 
     {
         form.beSigned(*this);
-        std::cout << _name << " signed " << form.getName() << std::endl;
+        std::cout <<CYAN<< _name <<RESET<< " signed " << form.getName() << std::endl;
     } catch (std::exception &e)
     {
-        std::cerr << _name << " couldn't sign " << form.getName() <<
-        " because grade is too low" << std::endl;
+        std::cerr <<CYAN<< _name <<RESET<<   " couldn't sign " << form.getName() <<
+       RED " because grade is too low" RESET<< std::endl;
     }
 }
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& rhs)
 {
-    o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << ".\n";
+    o <<CYAN<< rhs.getName() <<RESET<< ", bureaucrat grade " << rhs.getGrade() << ".\n";
     return o;
 }

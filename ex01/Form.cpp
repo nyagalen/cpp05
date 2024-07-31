@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 23:36:57 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:35:38 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:14:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void Form::beSigned(Bureaucrat& bureaucrat)
     if (bureaucrat.getGrade() > this->gradeSign)
         throw Form::GradeTooLowException();
     _signed = true;
-    std::cout << "Form signed successfully by bureaucrat "<< bureaucrat.getName() << std::endl;
+    std::cout << "Form signed successfully by bureaucrat "<< CYAN <<bureaucrat.getName() <<RESET << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& o, const Form& rhs)

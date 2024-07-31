@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:11:04 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:41:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ class Bureaucrat;
 class AForm
 {
 	private:
+		AForm();
 		const std::string _name;
 		bool _signed;
 		const int gradeSign;
 		const int gradeExec;
 	public:
-		AForm();
 		AForm(const std::string name, int gradeSign);
         AForm(const std::string name, int gradeSign, int gradeExec);
 		AForm(const AForm& copyMe);
@@ -44,13 +44,13 @@ class AForm
 	class GradeTooHighException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw() {return RED"Grade too high\n";}
+			virtual const char* what() const throw() {return RED"Grade too high\n" RESET;}
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw() {return RED"Grade too low\n";}
+			virtual const char* what() const throw() {return RED"Grade too low\n" RESET;}
 	};	
 
     class NotSignedException : public std::exception
