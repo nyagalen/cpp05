@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:00:37 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 15:29:48 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 20:01:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const
     if (executor.getGrade() > 45)
         throw AForm::GradeTooLowException();
     
-    std::cout << "Drrrrrrrr" << std::endl;
+    std::cout <<MAGENTA "Drrrrrrrr" RESET<< std::endl;
     static int success;
     if (success % 2 == 0)
         std::cout << _target << " has been robotomized successfully" << std::endl;

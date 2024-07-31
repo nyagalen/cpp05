@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 02:15:16 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:00:59 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 21:28:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ AForm* Intern::newPardon(std::string target)
 
 AForm* Intern::newRobotomy(std::string target)
 {
+    
     return new RobotomyRequestForm(target);
 }
 
@@ -47,8 +48,10 @@ AForm* Intern::makeForm(std::string type, std::string target)
 {
     AForm* form = NULL;
     
+    std::cout << "+++++++++Intern creating form: "<< type<< " for target: "<< target<< std::endl;
+    
     std::string options[] = {"robotomy request", "shrubbery request", "pardon request"};
-    t_action forms[] = {&Intern::newShrubbery, &Intern::newRobotomy, &Intern::newPardon};
+    t_action forms[] = {&Intern::newRobotomy, &Intern::newShrubbery, &Intern::newPardon};
     for (int i = 0; i < 3; i++)
     {
         if (type == options[i])
@@ -58,6 +61,7 @@ AForm* Intern::makeForm(std::string type, std::string target)
         }   
     }
     if (form == NULL)
-        std::cerr << RED"Form doesn't exist" << std::endl;
+        throw Intern::FormDoesntExistException();
+        //std::cerr << RED"Form doesn't exist" RESET<< std::endl;
     return form;
 }

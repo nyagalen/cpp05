@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 15:26:45 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 21:22:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,15 @@ int main(void)
     AForm* robotomy = intern.makeForm("robotomy request", "robotomy target");
     AForm* shrub = intern.makeForm("shrubbery request", "shrub target");
     AForm* pardon = intern.makeForm("pardon request", "convicted felon");
+
+   try{
+    
+    AForm* nonexistent = intern.makeForm("nonexistent", "blabla");
+    nonexistent->beSigned(president);
+   }catch (std::exception &e)
+   {
+    std::cout << e.what() << std::endl;
+   }
     
     try 
     {
@@ -34,6 +43,8 @@ int main(void)
         president.executeForm(*shrub);
         robotomy->beSigned(loch);
         president.executeForm(*robotomy);
+        std::cout << "\n-------Will Loch be also good at robotomy?-------------" << std::endl;
+        loch.executeForm(*robotomy);
         pardon->beSigned(loch);
         president.executeForm(*pardon);
         

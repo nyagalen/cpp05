@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 19:55:32 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 20:06:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 int main(void)
 {
     Bureaucrat president("Zaphod Beeblebrox", 3);
+    Bureaucrat mid("Just a mid guy", 45);
     Bureaucrat loch("Loch pozorny", 145);
     
     ShrubberyCreationForm shrub("forest");
@@ -30,7 +31,7 @@ int main(void)
         robotomy.beSigned(president);
         president.executeForm(robotomy);
         std::cout << "\n----Will a second robotomy be successful?------" << std::endl;
-        president.executeForm(robotomy);
+        mid.executeForm(robotomy);
         std::cout << "\n--------Let's try to execute an unsigned form!-------" << std::endl;
         president.executeForm(pardon);
     }

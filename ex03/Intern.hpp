@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 02:16:05 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:04:13 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 21:17:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 #define RED "\033[31m"
 #define CYAN "\033[36m"
+#define MAGENTA "\033[35m"
+#define RESET "\033[0m"
 
 class Intern
 {
@@ -32,6 +34,12 @@ public:
     AForm* newPardon(std::string target);
     AForm* newRobotomy(std::string target);
     AForm* makeForm(std::string type, std::string target);
+    
+    class FormDoesntExistException : public std::exception
+    {
+        public:
+            virtual const char* what() const throw() {return RED"Let's fire this intern\n" RESET;}
+    };
 };
 
 typedef AForm *(Intern::*t_action)(std::string target); 

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:41 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:08:03 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 20:51:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ void Bureaucrat::decrement()
 
 void Bureaucrat::executeForm(const AForm& form)
 {
-    if (form.isSigned() == false)
-        throw AForm::NotSignedException();
-    if (form.getGradeExec() < grade)
-        throw Bureaucrat::GradeTooLowException();
+    // if (form.isSigned() == false)
+    //     throw AForm::NotSignedException();
+    // if (form.getGradeExec() < grade)
+    //     throw Bureaucrat::GradeTooLowException();
     std::cout << CYAN << _name << RESET << " is executing " << form.getName() << std::endl;
     form.execute(*this);
 }

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:41:31 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 20:56:11 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #define RED "\033[31m"
 #define CYAN "\033[36m"
+#define MAGENTA "\033[35m"
 #define RESET "\033[0m"
 
 class Bureaucrat;
@@ -56,7 +57,7 @@ class AForm
     class NotSignedException : public std::exception
     {
         public:
-            virtual const char* what() const throw() { return "Form not signed\n";}
+            virtual const char* what() const throw() { return RED"Form not signed\n" RESET;}
     };
 		
 };
