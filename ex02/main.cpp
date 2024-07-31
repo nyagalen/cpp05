@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 19:49:28 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:55:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int main(void)
     try 
     {
         std::cout << "\n--------------let's see if loch is also good at pardoning!----------"<< std::endl;
-        pardon.beSigned(president);
+        //pardon.beSigned(president);
         loch.executeForm(pardon);
     }
     catch (std::exception &e)
