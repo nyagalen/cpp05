@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 01:28:10 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/30 16:17:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ int main(void)
     try 
     {
         shrub.beSigned(loch);
+        president.executeForm(shrub);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    try 
+    {
         president.executeForm(shrub);
     }
     catch (std::exception &e)

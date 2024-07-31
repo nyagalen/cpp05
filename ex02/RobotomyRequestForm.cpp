@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:00:37 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 13:49:52 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 17:35:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const
 {
     if (this->isSigned() == false)
         throw AForm::NotSignedException();
-    if (executor.getGrade() < 45)
+    if (executor.getGrade() > 45)
         throw AForm::GradeTooLowException();
     
     std::cout << "Drrrrrrrrrr" << std::endl;
