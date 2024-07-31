@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 16:17:52 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:33:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(void)
     {
         shrub.beSigned(loch);
         president.executeForm(shrub);
+        president.executeForm(pardon);
     }
     catch (std::exception &e)
     {
@@ -35,7 +36,9 @@ int main(void)
     }
     try 
     {
-        president.executeForm(shrub);
+        std::cout << "\n--------------let's see if loch is also good at pardoning!----------"<< std::endl;
+        pardon.beSigned(president);
+        loch.executeForm(pardon);
     }
     catch (std::exception &e)
     {

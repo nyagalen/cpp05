@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:41 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 16:14:53 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:34:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), grade(grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << "name/grade constructor called" << std::endl;
+    std::cout << "Bureaucrat " << CYAN << _name<< RESET << " created" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copyMe): _name(copyMe._name), grade(copyMe.grade)
@@ -68,11 +68,12 @@ void Bureaucrat::decrement()
 
 void Bureaucrat::executeForm(const AForm& form)
 {
+   // std::cout << "Hello from executeForm" << form.getName() << "Is it signed? " << form. isSigned() << std::endl;
     if (form.isSigned() == false)
         throw AForm::NotSignedException();
     if (form.getGradeExec() < grade)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << _name << " executed " << form.getName() << std::endl;
+    std::cout <<CYAN << _name << RESET << " executed " << form.getName() << std::endl;
     form.execute(*this);
 }
 

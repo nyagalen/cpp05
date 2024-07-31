@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:28 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 17:58:47 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:21:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "AForm.hpp"
 
 #define RED "\033[31m"
+#define CYAN "\033[36m"
+#define RESET "\033[0m"
 
 class AForm;
 
