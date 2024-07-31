@@ -6,11 +6,11 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/27 18:56:10 by svydrina          #+#    #+#              #
-#    Updated: 2024/07/30 13:52:24 by marvin           ###   ########.fr        #
+#    Updated: 2024/07/31 23:27:37 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = AForm
+NAME = Intern
 
 SRCS = AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
 	ShrubberyCreationForm.cpp Intern.cpp main.cpp 
