@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 02:16:05 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 04:15:14 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:04:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+
+#define RED "\033[31m"
+#define CYAN "\033[36m"
 
 class Intern
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svydrina <svydrina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:43:28 by svydrina          #+#    #+#             */
-/*   Updated: 2024/06/15 23:31:47 by svydrina         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:52:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();	
-	std::cout << "name/grade constructor called" << std::endl;
+	std::cout << "Bureaucrat created!" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copyMe): _name(copyMe._name), grade(copyMe.grade)
@@ -58,6 +58,7 @@ void	Bureaucrat::increment()
 	if (this->grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
 	this->grade--;
+	std::cout << "Bureaucrat " << this->_name << " has been promoted!" << std::endl;
 }
 
 void	Bureaucrat::decrement()
@@ -65,6 +66,7 @@ void	Bureaucrat::decrement()
 	if (this->grade >= 150)
 		throw Bureaucrat::GradeTooLowException();
 	this->grade++;
+	std::cout << "Bureaucrat "<< this->_name << " has been degraded!" << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& rhs)

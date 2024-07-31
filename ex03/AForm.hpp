@@ -6,13 +6,17 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 00:51:15 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:11:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 #include "Bureaucrat.hpp"
+
+#define RED "\033[31m"
+#define CYAN "\033[36m"
+#define RESET "\033[0m"
 
 class Bureaucrat;
 
@@ -40,13 +44,13 @@ class AForm
 	class GradeTooHighException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw() {return "Grade too high\n";}
+			virtual const char* what() const throw() {return RED"Grade too high\n";}
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 		public:
-			virtual const char* what() const throw() {return "Grade too low\n";}
+			virtual const char* what() const throw() {return RED"Grade too low\n";}
 	};	
 
     class NotSignedException : public std::exception

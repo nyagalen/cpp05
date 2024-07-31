@@ -66,11 +66,11 @@ int AForm::getGradeExec() const
 
 void AForm::beSigned(Bureaucrat& bureaucrat)
 {
-    std::cout << "bureaucrat " << bureaucrat.getName() << " trying to sign form " << this->_name << std::endl;
+    std::cout << "bureaucrat " << CYAN << bureaucrat.getName() << RESET" trying to sign form " << this->_name << std::endl;
     if (bureaucrat.getGrade() > this->gradeSign)
         throw AForm::GradeTooLowException();
     _signed = true;
-    std::cout << "AForm signed successfully by bureaucrat "<< bureaucrat.getName() << std::endl;
+    std::cout << "AForm signed successfully by bureaucrat "<< CYAN << bureaucrat.getName() <<RESET << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& o, const AForm& rhs)

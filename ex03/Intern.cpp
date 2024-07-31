@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 02:15:16 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 13:58:58 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:00:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ AForm* Intern::makeForm(std::string type, std::string target)
         }   
     }
     if (form == NULL)
-        std::cerr << "Form doesn't exist" << std::endl;
+        std::cerr << RED"Form doesn't exist" << std::endl;
     return form;
 }

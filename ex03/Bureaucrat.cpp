@@ -6,12 +6,15 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:41 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/30 15:35:49 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 18:08:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
+
+#define CYAN "\033[36m"
+#define RESET "\033[0m"
 
 Bureaucrat::Bureaucrat()
 {}
@@ -72,7 +75,7 @@ void Bureaucrat::executeForm(const AForm& form)
         throw AForm::NotSignedException();
     if (form.getGradeExec() < grade)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << _name << " is executing " << form.getName() << std::endl;
+    std::cout << CYAN << _name << RESET << " is executing " << form.getName() << std::endl;
     form.execute(*this);
 }
 
