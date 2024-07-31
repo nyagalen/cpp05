@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 19:09:13 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 19:38:41 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:49:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ int main(void)
     PresidentialPardonForm pardon("Loch pozorny");
     try
     {
-        std::cout << "\nLet's try to execute an unsigned form!" << std::endl;
+        std::cout << "\n---------let's see if Zaphod Beeblebrox is good at robotomies-----" << std::endl;
+        robotomy.beSigned(president);
+        president.executeForm(robotomy);
+        std::cout << "\n----Will a second robotomy be successful?------" << std::endl;
+        president.executeForm(robotomy);
+        std::cout << "\n--------Let's try to execute an unsigned form!-------" << std::endl;
         president.executeForm(pardon);
     }
     catch(const std::exception& e)

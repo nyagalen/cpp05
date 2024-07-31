@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:56:41 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 19:34:15 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:45:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void Bureaucrat::executeForm(const AForm& form)
         throw AForm::NotSignedException();
     if (form.getGradeExec() < grade)
         throw Bureaucrat::GradeTooLowException();
-    std::cout <<CYAN << _name << RESET << " executed " << form.getName() << std::endl;
+    std::cout <<CYAN << _name << RESET << " executing  " << form.getName() << std::endl;
     form.execute(*this);
 }
 

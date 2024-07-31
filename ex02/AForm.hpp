@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 18:58:21 by svydrina          #+#    #+#             */
-/*   Updated: 2024/07/31 18:40:35 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 19:42:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #define RED "\033[31m"
 #define CYAN "\033[36m"
+#define MAGENTA "\033[35m"
 #define RESET "\033[0m"
 
 class Bureaucrat;
